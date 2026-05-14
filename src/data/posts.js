@@ -1,11 +1,35 @@
 export const posts = [
   {
     id: 1,
-    slug: "my-first-post",
-    title: "My First Post",
+    slug: "first-yap",
+    title: "Just vibing and typing",
     date: "2026-05-14",
-    summary: "A short intro to what this blog is about.",
-    content: `Full content of the post goes here. Write as much as you want.`
+    category: "yap",
+    summary: "No agenda. Just thoughts flowing out.",
+    content: "This is my first free-flowing post. Write whatever you want here..."
   },
-  // add more posts here
+  {
+    id: 2,
+    slug: "interstellar-review",
+    title: "Interstellar made me feel things",
+    date: "2026-05-14",
+    category: "movies",
+    summary: "A late review of a film that still hits hard.",
+    content: "I rewatched Interstellar last night and..."
+  },
+  {
+    id: 3,
+    slug: "how-react-works",
+    title: "How React actually works",
+    date: "2026-05-14",
+    category: "learning",
+    summary: "Breaking down components, state, and re-renders.",
+    content: "React is a UI library that..."
+  }
 ];
+
+export const categories = {
+  yap:      { label: "Daily Yap",  emoji: "💬" },
+  movies:   { label: "Movies",     emoji: "🎬" },
+  learning: { label: "Learning",   emoji: "📚" },
+};
