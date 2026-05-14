@@ -4,7 +4,7 @@ import { categories } from "../data/posts";
 function Navbar() {
   return (
     <nav className="navbar">
-      <Link to="/" className="nav-logo">My Blog</Link>
+      <Link to="/" className="nav-logo">DayZen</Link>
       <div className="nav-links">
         {Object.entries(categories).map(([key, cat]) => (
           <Link key={key} to={`/category/${key}`}>

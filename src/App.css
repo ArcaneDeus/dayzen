@@ -1,12 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Bebas+Neue&family=Syne:wght@400;700;800&family=DM+Sans:wght@400;500&display=swap');
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* ─── BASE ─── */
 body {
   font-family: Georgia, serif;
   background: #fafaf8;
   color: #1a1a1a;
   line-height: 1.7;
+  transition: background 0.3s, color 0.3s;
 }
 
+.container { max-width: 720px; margin: 2rem auto; padding: 0 1.5rem; }
+
+/* ─── NAVBAR BASE ─── */
 .navbar {
   display: flex;
   align-items: center;
@@ -15,24 +22,14 @@ body {
   border-bottom: 1px solid #e0e0e0;
   background: #fff;
 }
-
-.nav-logo {
-  font-size: 1.3rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: #1a1a1a;
-}
-
+.nav-logo { font-size: 1.3rem; font-weight: bold; text-decoration: none; color: #1a1a1a; }
 .nav-links { display: flex; gap: 1.5rem; }
 .nav-links a { text-decoration: none; color: #555; font-size: 0.95rem; }
 .nav-links a:hover { color: #1a1a1a; }
 
-.container { max-width: 720px; margin: 2rem auto; padding: 0 1.5rem; }
-
+/* ─── HOME ─── */
 h1 { font-size: 2rem; margin-bottom: 2rem; }
-
 .category-section { margin-bottom: 3rem; }
-
 .category-header {
   display: flex;
   justify-content: space-between;
@@ -41,23 +38,144 @@ h1 { font-size: 2rem; margin-bottom: 2rem; }
   border-bottom: 2px solid #1a1a1a;
   padding-bottom: 0.5rem;
 }
-
 .category-header h2 { font-size: 1.3rem; }
 .category-header a { font-size: 0.85rem; color: #555; text-decoration: none; }
-
-.post-card {
-  padding: 1rem 0;
-  border-bottom: 1px solid #e8e8e8;
-}
-
+.post-card { padding: 1rem 0; border-bottom: 1px solid #e8e8e8; }
 .post-card h3 { font-size: 1.1rem; margin-bottom: 0.25rem; }
 .post-card h3 a { text-decoration: none; color: #1a1a1a; }
 .post-card h3 a:hover { text-decoration: underline; }
 .post-card time { font-size: 0.8rem; color: #888; display: block; margin-bottom: 0.4rem; }
 .post-card p { color: #555; font-size: 0.95rem; }
-
+.back-link { font-size: 0.85rem; color: #555; text-decoration: none; }
+.back-link:hover { color: #1a1a1a; }
 .post-page h1 { font-size: 2rem; margin: 1rem 0 0.5rem; }
 .post-page time { color: #888; font-size: 0.85rem; display: block; margin-bottom: 1.5rem; }
 .post-content { font-size: 1.05rem; line-height: 1.9; }
-.back-link { font-size: 0.85rem; color: #555; text-decoration: none; }
-.back-link:hover { color: #1a1a1a; }
+
+
+/* ════════════════════════════════
+   THEME: YAP — warm & personal
+════════════════════════════════ */
+.theme-yap body, body.theme-yap {
+  background: #fdf6ee;
+  color: #3d2a1e;
+  font-family: Georgia, serif;
+}
+body.theme-yap .navbar {
+  background: #3d2a1e;
+  border-bottom: none;
+}
+body.theme-yap .nav-logo {
+  font-family: 'Caveat', cursive;
+  font-size: 1.5rem;
+  color: #f5e6d3;
+}
+body.theme-yap .nav-links a { color: #c9a87c; }
+body.theme-yap .nav-links a:hover { color: #f5e6d3; }
+
+body.theme-yap .post-page h1 {
+  font-family: 'Caveat', cursive;
+  font-size: 2.8rem;
+  color: #3d2a1e;
+}
+body.theme-yap .post-page time { color: #a07850; }
+body.theme-yap .post-content { color: #5a3e2b; }
+body.theme-yap .back-link { color: #a07850; }
+body.theme-yap .back-link:hover { color: #3d2a1e; }
+
+body.theme-yap .category-header { border-bottom-color: #c17f4e; }
+body.theme-yap .post-card h3 a { color: #3d2a1e; }
+body.theme-yap .post-card { border-bottom-color: #e8d5c0; }
+
+
+/* ════════════════════════════════
+   THEME: MOVIES — cinematic dark
+════════════════════════════════ */
+body.theme-movies {
+  background: #141414;
+  color: #e0e0e0;
+  font-family: Georgia, serif;
+}
+body.theme-movies .navbar {
+  background: #0d0d0d;
+  border-bottom: 1px solid #2a2a2a;
+}
+body.theme-movies .nav-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  color: #e8c84a;
+}
+body.theme-movies .nav-links a { color: #888; }
+body.theme-movies .nav-links a:hover { color: #e8c84a; }
+
+body.theme-movies .post-page h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+body.theme-movies .post-page time {
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.8rem;
+}
+body.theme-movies .post-content { color: #bbb; }
+body.theme-movies .back-link { color: #e8c84a; }
+body.theme-movies .back-link:hover { color: #fff; }
+
+body.theme-movies .category-header { border-bottom-color: #e8c84a; }
+body.theme-movies .category-header h2 { color: #fff; }
+body.theme-movies .category-header a { color: #e8c84a; }
+body.theme-movies .post-card { border-bottom-color: #2a2a2a; }
+body.theme-movies .post-card h3 a { color: #fff; }
+body.theme-movies .post-card p { color: #888; }
+body.theme-movies h1 { color: #fff; }
+
+
+/* ════════════════════════════════
+   THEME: LEARNING — bold magazine
+════════════════════════════════ */
+body.theme-learning {
+  background: #fff;
+  color: #111;
+  font-family: 'DM Sans', sans-serif;
+}
+body.theme-learning .navbar {
+  background: #fff;
+  border-bottom: 2px solid #111;
+}
+body.theme-learning .nav-logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #111;
+}
+body.theme-learning .nav-links a { color: #111; font-family: 'DM Sans', sans-serif; }
+body.theme-learning .nav-links a:hover { color: #555; }
+
+body.theme-learning .post-page h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #111;
+}
+body.theme-learning .post-page time {
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.75rem;
+}
+body.theme-learning .post-content { color: #333; font-family: 'DM Sans', sans-serif; }
+body.theme-learning .back-link { color: #999; font-family: 'DM Sans', sans-serif; }
+body.theme-learning .back-link:hover { color: #111; }
+
+body.theme-learning .category-header { border-bottom-color: #111; }
+body.theme-learning .category-header h2 { font-family: 'Syne', sans-serif; font-weight: 800; }
+body.theme-learning .post-card h3 a { color: #111; font-family: 'Syne', sans-serif; }
+body.theme-learning .post-card { border-bottom-color: #eee; }
+body.theme-learning .post-card p { font-family: 'DM Sans', sans-serif; }
+body.theme-learning h1 { font-family: 'Syne', sans-serif; font-weight: 800; }
